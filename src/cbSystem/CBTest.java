@@ -26,7 +26,7 @@ public class CBTest {
         	System.out.println("Please Selct one of thse options.");
         	System.out.println("1 :Movie Catelogue");
         	System.out.println("2 :Search for movie");
-        	System.out.println("0 :Exit");
+        	System.out.println("0 :Exit *NOT WORKING YET*");
         	option = Input.getInteger("option: ");
         	switch(option) {
 
@@ -45,7 +45,7 @@ public class CBTest {
 		            }while(Repeat.repeat());//End of do/while loop 
             break;
             
-        	case 0:
+        	/*case 0:
         		System.out.print("Are you sure you want to exit? ");
         		//System.out.println();
         		do {
@@ -60,7 +60,7 @@ public class CBTest {
             		}
         		}while(exit == "n" || exit == "y");
         		
-            break;
+            break;*/ // Not Working  !Yet!
         
         	default:
         		
