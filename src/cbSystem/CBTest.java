@@ -6,7 +6,7 @@ public class CBTest {
 
     public static void main(String[] args) throws Exception {
         SortedADT sorted = new BinarySearchTree();
-        sorted.insert("bombsHell");
+        sorted.insert("bombshell");
         sorted.insert("kingsmen");
         sorted.insert("jojo Rabit");
         sorted.insert("x-alibre");
@@ -21,7 +21,7 @@ public class CBTest {
        // System.out.println(sorted);// This prints the populated tree
         String movieTitle;
         Integer option;
-        String exit;
+        //String exit; // Not used at the moment
         do{
         	System.out.println("Please Selct one of thse options.");
         	System.out.println("1 :Movie Catelogue");
@@ -31,6 +31,7 @@ public class CBTest {
         	switch(option) {
 
         	case 1:
+        		System.out.println(sorted);// This prints the populated tree
         		System.out.println("You have chosen the first option");
         		break;
         	case 2:
