@@ -1,0 +1,65 @@
+package cbSystem;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.HashMap;
+
+public class MovieDetails {
+		
+	private String title;
+	   private String genre;
+	   private String cert;
+	   private String cast[];
+	   private String directors[];
+	   private BigDecimal price;
+	   
+	    
+	    public MovieDetails(String title, String genre, String cert, String cast[], String directors[], BigDecimal price){
+	    	this.make = make;
+	        this.model = model;
+	        this.colour = colour;
+	        this.reg = reg;
+
+	    }
+	 
+	    public String getMake() {
+	    	return make;
+	    }
+	    public String toString(){
+	        String carDetails=new String();
+	        carDetails+=this.make;
+	        carDetails+=this.model;
+	        carDetails+=this.colour;
+	        carDetails+=this.reg;
+	        
+	        
+	        carDetails=String.format("%-20s%-20s%-20s%-20s",this.make, this.model, this.colour, this.reg);
+	        return carDetails;
+	}
+	
+	
+	
+	/*
+	 static String movieTitle;
+	 static String genre;
+	 static String[] cast;
+	 static String[] directors;
+	 static String cert;
+	 static double price = 7.99;
+	 
+	
+	 
+	public MovieDetails(String movieTitle, String genre, String[] cast, String[] directors, String cert,
+			double price) {
+		
+	}
+
+
+	public void getMovieDetails(){
+		List<MovieDetails> details = new ArrayList<>();
+        // Read in all of the attributes and create an Item
+		details.add(new MovieDetails( movieTitle, genre, cast, directors, cert, price));
+		System.out.println(details);
+		}//END OF MOVIE LIST*/
+	}//END OF MOVIE DETAILS
+   

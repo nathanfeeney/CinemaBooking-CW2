@@ -1,0 +1,76 @@
+package cbSystem;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Iterator;
+
+public class MovieDetails {
+	
+	
+	
+	    String name;
+	    String clg ;
+	    String branch ;
+	    double per;
+	    
+	    MovieDetails(String s1,String s2,String s3,double p)
+	     {
+	         name=s1;
+	         clg=s2;
+	         branch=s3;
+	         per=p;
+	     }
+	 
+	}
+	class Check
+	{
+		public static void main(String arg[]) 
+		{	
+		     HashMap<Integer, MovieDetails> hm=new HashMap<Integer, MovieDetails>();
+		 
+	                MovieDetails x1=new MovieDetails("goutham","SNIST","cse",68.5);
+	                MovieDetails x2=new MovieDetails("kanakesh","SNIST","ecm",70);
+	                MovieDetails x3=new MovieDetails("rahul","SNIST","ecm",75);
+	                MovieDetails x4=new MovieDetails("vasista","SNIST","ECM",80);
+	                MovieDetails x5=new MovieDetails("narayana","SNIST","EEE",85);
+		        hm.put(1,x1);
+		        hm.put(2,x2);
+		        hm.put(3,x3);
+		        hm.put(4,x4);
+		        hm.put(5,x5); 
+		   Iterator trav=hm.entrySet().iterator();
+		while(trav.hasNext())
+		{
+			Map.Entry record=(Map.Entry)trav.next();  //will give next (Key, Value) pair
+			MovieDetails j=(MovieDetails)record.getValue();
+	                System.out.println(record.getKey()+" "+j.name+" "+j.clg+" "+j.branch+" "+j.per);
+		}
+	       }
+	
+	
+	
+	/*
+	 static String movieTitle;
+	 static String genre;
+	 static String[] cast;
+	 static String[] directors;
+	 static String cert;
+	 static double price = 7.99;
+	 
+	
+	 
+	public MovieDetails(String movieTitle, String genre, String[] cast, String[] directors, String cert,
+			double price) {
+		
+	}
+
+
+	public void getMovieDetails(){
+		List<MovieDetails> details = new ArrayList<>();
+        // Read in all of the attributes and create an Item
+		details.add(new MovieDetails( movieTitle, genre, cast, directors, cert, price));
+		System.out.println(details);
+		}//END OF MOVIE LIST*/
+	}//END OF MOVIE DETAILS
+   

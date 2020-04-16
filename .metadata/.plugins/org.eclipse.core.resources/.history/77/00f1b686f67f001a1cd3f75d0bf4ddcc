@@ -1,0 +1,46 @@
+package cbSystem;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.HashMap;
+
+public class MovieDetails {
+	
+	
+		  public static void main(String[] args) {
+		    // Create a HashMap object called capitalCities
+		    HashMap<String, String> capitalCities = new HashMap<String, String>();
+
+		    // Add keys and values (Country, City)
+		    capitalCities.put("England", "London");
+		    capitalCities.put("Germany", "Berlin");
+		    capitalCities.put("Norway", "Oslo");
+		    capitalCities.put("USA", "Washington DC");
+		    System.out.println(capitalCities);
+		  }
+		
+	
+	
+	/*
+	 static String movieTitle;
+	 static String genre;
+	 static String[] cast;
+	 static String[] directors;
+	 static String cert;
+	 static double price = 7.99;
+	 
+	
+	 
+	public MovieDetails(String movieTitle, String genre, String[] cast, String[] directors, String cert,
+			double price) {
+		
+	}
+
+
+	public void getMovieDetails(){
+		List<MovieDetails> details = new ArrayList<>();
+        // Read in all of the attributes and create an Item
+		details.add(new MovieDetails( movieTitle, genre, cast, directors, cert, price));
+		System.out.println(details);
+		}//END OF MOVIE LIST*/
+	}//END OF MOVIE DETAILS
+   

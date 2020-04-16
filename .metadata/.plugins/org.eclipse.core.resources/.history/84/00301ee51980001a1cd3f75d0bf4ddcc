@@ -1,0 +1,40 @@
+package cbSystem;
+
+import java.math.BigDecimal;
+
+public class movieList {
+	private MovieDetails[] movies;
+	   private Integer numberOfMovies;
+	   
+	   public movieList(Integer movieListSize){
+	       this.movies=new MovieDetails[movieListSize];
+	       this.numberOfMovies=0;
+	   }
+	   
+	   public void addMovie(String title, String genre, String cert, String cast, String directors, double price){
+	       this.movies[this.numberOfMovies]=new MovieDetails(title, genre,  cert, cast, directors, price);
+	       this.numberOfMovies++;
+	   }
+	    boolean search (String make) {
+	    	for(int i=0; i< movies.length; i++) {
+	    		if(make.equals(movies[i].getMake())) {
+	    			return true;
+	    		}
+	    		}
+	    	return false;
+	    }
+
+	   
+	    public String toString(){
+	        String movieDetails=new String();
+	        if(this.numberOfMovies!=0){
+	        	movieDetails=String.format("%-20s%-20s%-20s%-20s%-20s%-20s%-20s\n","Make","Model ","Colour","Registration");
+	            for (Integer index = 0; index < this.numberOfMovies; index++)
+	                movieDetails += this.movies[index] + "\n";
+	        }
+	       else
+	    	   movieDetails+="Movie List is EMPTY";
+	       return movieDetails;
+	   }
+
+}

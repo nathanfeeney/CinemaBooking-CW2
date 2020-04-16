@@ -1,0 +1,30 @@
+package cbSystem;
+import java.util.ArrayList;
+import java.util.List;
+
+public class MovieDetails {
+	static String movieTitle;
+	 static String genre;
+	 static String[] cast;
+	 static String[] directors;
+	 static String cert;
+	 static double price = 7.99;
+	 
+	
+	 
+	public MovieDetails(String movieTitle, String genre, String[] cast, String[] directors, String cert,
+			double price) {
+		
+	}
+
+
+	public void getMovieDetails(){
+		List<MovieDetails> details = new ArrayList<>();
+        // Read in all of the attributes and create an Item
+		movieTitle = "Hello";
+		genre = "Hello";
+		details.add(new MovieDetails( movieTitle, genre, cast, directors, cert, price));
+		System.out.println(details);
+		}//END OF MOVIE LIST
+	}//END OF MOVIE DETAILS
+   

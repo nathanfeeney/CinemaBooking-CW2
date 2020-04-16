@@ -1,0 +1,19 @@
+package cbSystem;
+import java.util.ArrayList;
+import java.util.List;
+
+public class MovieDetails {
+	String movieTitle;
+	String genre;
+	String[] cast;
+	String[] directors;
+	String cert;
+	double price = 7.99;
+	
+	public class movieList{
+		List<MovieDetails> details = new ArrayList<>();
+        // Read in all of the attributes and create an Item
+        
+		}//END OF MOVIE LIST
+	}//END OF MOVIE DETAILS
+   
