@@ -1,0 +1,170 @@
+package cbSystem;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+import cbSystem.Seat;
+
+public class CinemaRoom {
+	MovieDetails m_movie;
+	int m_rows, m_cols;
+	Seat[][] m_seats;
+	double price = 7.50;
+	double totalPrice;
+	int input, howmany, count =0;
+	
+	public CinemaRoom(MovieDetails movie, int rows, int cols){
+		m_rows = rows;
+		m_cols = cols;
+		m_movie = movie;
+		m_seats=new Seat[m_rows][m_cols];
+		
+    
+		for (int i = 0; i<m_rows; i++) {
+			for(int j = 0; j<m_cols; j++) {
+				 m_seats[i][j]=new Seat(j);
+			}
+		}
+	}
+	/*public static void main(String[] args) {
+		Scanner reader=new Scanner(System.in);	
+		//Initialise totals
+		//bookingTot = cancelTot = 0;
+		
+		
+		String name;
+		String menu = "Menu: "
+	            + "\n1: Book seats"
+	            + "\n2: View current seating"
+	            + "\n0: Quit program";
+	    do {
+			//Asks the user what she wants to do
+            System.out.println("\n"+menu);
+            System.out.println("Price per person: £7.50");
+            System.out.println("Input (1-2 or 0): ");
+            
+            input = Integer.parseInt(reader.next());
+            reader.nextLine();
+            	switch(input)
+            	{
+                case 1:
+                //When all the 30 seats are booked, the program informs the user that the cinema is full.
+                if(count == 30)
+                {
+                    System.out.println("\nThe cinema is fully booked.");
+                }
+                else
+                {
+                    do
+                    {	
+                        System.out.println("How many seats would you like to book? ");
+                        howmany = reader.nextInt();
+                        //Price Calculation
+                        totalPrice = howmany*price;
+                        ////////////////////////////////////////////////////////////////////////
+                        if(howmany>3)
+                        {
+                            System.out.println("The maximum number of seats per booking is 3.");
+                        }
+                        if(howmany<1)
+                        {
+                            System.out.println("The minimum number of seats per booking is 1.");
+                        }
+                    }
+                    while(howmany>3 || howmany<1);
+                    for(int j=0;j<howmany;j++)
+                    {
+                    	System.out.println(Arrays.deepToString(seats).replace("], ", "]\n"));
+                        do
+                        {
+                            //Asks the user on what row he would like to book a seat
+                            System.out.println("Where would person number "+(j+1)+" like to sit?");
+                            do
+                            {
+                                System.out.print("Row: ");
+                                row=reader.nextInt();
+                                //If the user choses a nonexistent row
+                                if(row>5)
+                                {
+                                    System.out.println("There are only 5 rows, please choose a new row.");
+                                }
+                            }
+                            while(row>5);
+                            //Asks what seat the user would like.
+                            do
+                            {
+                                System.out.print("Seat: ");
+                                name=reader.next();
+                                //If the user choses a nonexistent seat
+                                if(!name.equals("1") 
+                                		&& !name.equals("2") 
+                                		&& !name.equals("3") 
+                                		&& !name.equals("4") 
+                                		&& !name.equals("5") 
+                                		&& !name.equals("6")
+                                		&& !name.equals("7") 
+                                		&& !name.equals("8") 
+                                		&& !name.equals("9")
+                                		&& !name.equals("10"))
+                                {
+                                    System.out.println("There are only 10 seats per row, please choose a new seat.");
+                                }
+                            }
+                            while(!name.equals("1") 
+                            		&& !name.equals("2") 
+                            		&& !name.equals("3") 
+                            		&& !name.equals("4") 
+                            		&& !name.equals("5") 
+                            		&& !name.equals("6")
+                            		&& !name.equals("7") 
+                            		&& !name.equals("8") 
+                            		&& !name.equals("9")
+                            		&& !name.equals("10"));
+                        }
+                        while(row>5);
+                        for(int i=0;i<10;i++)
+                        {
+                            if(seats[row-1][i].getID().equalsIgnoreCase(ID))
+                            {
+                                //If the seat is already taken, it informs the user about it
+                                if(seats[row-1][i].getVisible()==false)
+                                {
+                                    System.out.println("\nThat seat is already taken, please select another one.\n");
+                                    j--;
+                                }      
+                                //If the seat is free, the program books it and marks it as taken.
+                                else
+                                {
+                                    seats[row-1][i].setVisible(false);
+                                    count++;
+                                }      
+                            }
+                        }
+                    }
+                    //output of price
+                    System.out.println("The total Price of this booking will be "+ "£" + totalPrice);
+                }
+               
+                break;
+                
+                case 2:
+                	System.out.println(Arrays.deepToString(seats).replace("], ", "]\n"));
+            	break;
+				case 0:
+	            System.out.println("Good bye!");
+	            break;
+	
+	            default:
+	            //Informs the user that the input is not valid
+	            System.out.println("Invalid input.");
+	            break;
+            	}// End of Switch
+            
+		}//End Of do
+		while(input != 0);
+		}*/
+		
+		
+		
+	}
+

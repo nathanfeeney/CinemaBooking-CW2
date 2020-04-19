@@ -1,0 +1,116 @@
+
+
+package cbSystem;
+import java.util.*;
+import java.math.BigDecimal;
+import java.util.Comparator;
+
+public class CBTest {
+
+    public static void main(String[] args) throws Exception {
+        List<CinemaRoom> cinemaRoomList = new ArrayList<>();
+        ////////////////////////////////
+        List<MovieDetails> movies = new ArrayList<>();
+        MovieDetails title;
+        movies.add(new MovieDetails("rajeev","rajeev","rajeev","rajeev","rajeev", 25));
+        movies.add(new MovieDetails("Apple","Apple","Apple","Apple","Apple", 25));
+        movies.add(new MovieDetails("Bovie","Movie","Movie","Movie","Movie", 25));
+        movies.add(new MovieDetails("Ciwi","Kiwi","Kiwi","Kiwi","Kiwi", 25));
+       // System.out.println(sorted);// This prints the populated tree
+        String movieTitle;
+        String movieSearch;
+        Integer option;
+        String continueToBooking;
+        String searchString;
+        
+        //String exit; // Not used at the moment
+        do{
+        	System.out.println("Please Selct one of thse options.");
+        	System.out.println("1 :Movie Catelogue");
+        	//System.out.println("2 :Search for movie");
+        	System.out.println("3 :Search for movie");
+        	System.out.println("0 :Testing");
+        	
+        	//System.out.println("0 :Exit *NOT WORKING YET*");
+        	option = Input.getInteger("option: ");
+        	switch(option) {
+        	case 0:
+        		System.out.print("Are you sure you want to exit? ");
+        		//System.out.println();
+          		String exit = "";
+        		do {
+        			exit = Input.getString("Y/N: ").toLowerCase();
+            		if(exit.equals("y")) {
+            			System.out.println("You are now exiting the program...");
+            			System.exit(0);
+            			
+            		}else if(exit.equals("n")) {
+            			System.out.println("Returning to main menu");
+            			break;
+            		}
+        		}while(exit != "n" || exit != "y");
+        		
+            break;
+
+        	case 1:
+        		movies.sort(Comparator.comparing(MovieDetails::getTitle));
+        		movies.forEach(movie -> {
+     	            System.out.println("Movie Title: " + movie.getTitle() );
+     	        });
+        		//System.out.println(sorted);// This prints the populated tree
+        		System.out.println("You have chosen the first option");
+        		break;
+        	case 2:
+		        
+            break;
+            
+        	case 3:
+        		searchString = Input.getString("enter movie Title:");
+        		System.out.println("Select one of the following movies");
+        		movies.sort(Comparator.comparing(MovieDetails::getTitle));
+        		movies.forEach(movie -> {
+     	            System.out.println("Movie Title: " + movie.getTitle() );
+     	        });
+
+        	     for (int i=0; i<movies.size();i++) {
+        	    	if( movies.get(i).getTitle().equals(searchString)) {
+        	    		System.out.println("You searched: " +movies.get(i));
+        	    		System.out.println("Would you like to continue to bookin?");
+        	    		
+        	    		do{
+        	    		continueToBooking = Input.getString("Y/N: ").toLowerCase();
+                		if(continueToBooking.equals("y")) {
+                			System.out.println("Continuing to booking... ");
+                			break;
+                			
+                		}else if(continueToBooking.equals("n")) {
+                			System.out.println("Returning to main menu");
+                			break;
+                		}
+            		}while(continueToBooking != "n" || continueToBooking != "y");
+        	    		
+        	    		break;
+        	    	}else {
+        	    		System.out.println(searchString + " Not Found");
+        	    	}
+        	     }
+        		break;
+
+   
+            
+        
+        
+        	default:
+        		
+        		System.out.println("Invalid choice, please select 1, 2 or 3");
+        		
+        		break;
+        	
+        	}
+        	
+        	  
+           
+            
+        }while(option !=0);// End of main do while loop //
+    }// End of Main
+}// End of CBTest
